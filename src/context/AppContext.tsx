@@ -62,6 +62,7 @@ interface AppContextType {
   // Profile & role
   setRole:         (role: UserRole) => void;
   updateProfile:   (updates: Partial<AppState['grandmaProfile']>) => void;
+  refreshGrandmaDifficulties: () => Promise<void>;
   // Workout
   toggleDifficulty:     (d: Difficulty) => void;
   toggleGoal:           (g: Goal) => void;
@@ -113,6 +114,21 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
         }
 
         if (session?.user) {
+          // ── Password recovery redirect: hash contains type=recovery ──────
+          const hashType = new URLSearchParams(window.location.hash.slice(1)).get('type');
+          if (hashType === 'recovery') {
+            console.log('[Auth] password recovery session — showing reset screen');
+            window.history.replaceState(null, '', window.location.pathname);
+            setState(s => ({
+              ...s,
+              user:            session.user,
+              isAuthenticated: true,
+              isLoading:       false,
+              screen:          'auth-reset-password',
+            }));
+            return;
+          }
+
           console.log('[Auth] restored session for', session.user.id);
           const profile = await fetchProfile(session.user.id);
           const role = (profile?.role ?? null) as UserRole;
@@ -129,6 +145,9 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
             isLoading:       false,
             role,
             screen,
+            ...(role === 'grandma' && profile ? {
+              grandmaProfile: { ...s.grandmaProfile, difficulties: (profile.difficulties ?? []) as Difficulty[] },
+            } : {}),
           }));
         } else {
           console.log('[Auth] no session — showing auth screen');
@@ -146,9 +165,26 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     // state directly after their own await, so we never need onAuthStateChange
     // to drive navigation. Handling it here too causes race conditions and
     // GoTrue lock conflicts when a second auth op starts before the handler finishes.
+    //
+    // PASSWORD_RECOVERY IS handled here — it only fires on password-reset email
+    // redirects, never during normal in-app sign-in flows.
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
         console.log('[Auth]', event);
+
+        // ── Password reset redirect ────────────────────────────────────────
+        if (event === 'PASSWORD_RECOVERY' && session?.user) {
+          console.log('[Auth] PASSWORD_RECOVERY — routing to reset screen');
+          window.history.replaceState(null, '', window.location.pathname);
+          setState(s => ({
+            ...s,
+            user:            session.user,
+            isAuthenticated: true,
+            isLoading:       false,
+            screen:          'auth-reset-password',
+          }));
+          return;
+        }
 
         if (event === 'TOKEN_REFRESHED' && session?.user) {
           setState(s => ({ ...s, user: session.user }));
@@ -337,7 +373,14 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     if (!data.user) return { error: 'שגיאה בכניסה — נסי שוב' };
     const profile = await fetchProfile(data.user.id);
     const role = (profile?.role ?? null) as UserRole;
-    set({ user: data.user, profile, isAuthenticated: true, isLoading: false, role, screen: roleScreen(role) });
+    setState(s => ({
+      ...s,
+      user: data.user, profile, isAuthenticated: true, isLoading: false, role,
+      screen: roleScreen(role),
+      ...(role === 'grandma' && profile ? {
+        grandmaProfile: { ...s.grandmaProfile, difficulties: (profile.difficulties ?? []) as Difficulty[] },
+      } : {}),
+    }));
     return { error: null };
   }
 
@@ -359,6 +402,19 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 
   const updateProfile = (updates: Partial<AppState['grandmaProfile']>) =>
     setState(s => ({ ...s, grandmaProfile: { ...s.grandmaProfile, ...updates } }));
+
+  const refreshGrandmaDifficulties = async () => {
+    const userId = state.user?.id;
+    const role   = state.role;
+    if (!userId || role !== 'grandma') return;
+    const fresh = await fetchProfile(userId);
+    if (!fresh) return;
+    setState(s => ({
+      ...s,
+      profile: fresh,
+      grandmaProfile: { ...s.grandmaProfile, difficulties: (fresh.difficulties ?? []) as Difficulty[] },
+    }));
+  };
 
   const toggleDifficulty = (d: Difficulty) =>
     setState(s => ({
@@ -404,7 +460,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     <AppContext.Provider value={{
       state,
       navigate, setPendingRole, signUp, signIn, signOut, setProfile,
-      setRole, updateProfile,
+      setRole, updateProfile, refreshGrandmaDifficulties,
       toggleDifficulty, toggleGoal, addWorkout,
       setPendingMessage, setCurrentWorkoutIndex, setSelectedWorkout,
       scheduleWorkout, clearScheduledWorkout,

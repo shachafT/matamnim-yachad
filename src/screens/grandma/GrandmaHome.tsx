@@ -1,6 +1,7 @@
 import { useMemo, useState, useEffect, useRef } from 'react';
 import { useApp } from '../../context/AppContext';
 import { WORKOUTS } from '../../data/workoutsData';
+import { PersonIcon } from '../../components/icons';
 
 const INDEPENDENT_WORKOUT_IDS = ['W06', 'W07', 'W08'];
 import AccountSheet from '../../components/AccountSheet';
@@ -14,7 +15,7 @@ import type { Message, LinkedUser } from '../../lib/messageService';
 import type { RealtimeChannel } from '@supabase/supabase-js';
 
 export default function GrandmaHome() {
-  const { state, navigate, setSelectedWorkout } = useApp();
+  const { state, navigate, setSelectedWorkout, refreshGrandmaDifficulties } = useApp();
   const [showAccount, setShowAccount] = useState(false);
   const { grandmaProfile, user, profile } = state;
   const firstName = profile?.nickname || grandmaProfile.name.replace('סבתא ', '') || 'סבתא';
@@ -27,6 +28,9 @@ export default function GrandmaHome() {
   const today = new Date().toISOString().split('T')[0];
   const hour   = new Date().getHours();
   const greeting = hour < 12 ? 'בוקר טוב' : hour < 17 ? 'צהריים טובים' : 'ערב טוב';
+
+  // Refresh grandma's difficulties from DB so workout adaptations stay current
+  useEffect(() => { refreshGrandmaDifficulties(); }, [user?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const [dbSchedule, setDbSchedule] = useState<ScheduledWorkoutRow[]>([]);
   useEffect(() => {
@@ -129,7 +133,7 @@ export default function GrandmaHome() {
           boxShadow: '0 2px 8px rgba(0,0,0,0.18)',
         }}
       >
-        👤
+        <PersonIcon size={20} color="white" />
       </button>
 
       {showAccount && <AccountSheet onClose={() => setShowAccount(false)} />}

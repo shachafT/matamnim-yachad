@@ -22,7 +22,8 @@ export type Screen =
   | 'grandma-active-workout'
   | 'grandma-workout-summary'
   | 'grandma-conversation'
-  | 'grandma-progress';
+  | 'grandma-progress'
+  | 'auth-reset-password';
 
 export type Difficulty =
   | 'vision'

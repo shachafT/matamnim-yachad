@@ -1,9 +1,10 @@
 import { useApp } from './context/AppContext';
 
 // Auth screens
-import RoleSelect from './screens/auth/RoleSelect';
-import SignUp     from './screens/auth/SignUp';
-import SignIn     from './screens/auth/SignIn';
+import RoleSelect    from './screens/auth/RoleSelect';
+import SignUp        from './screens/auth/SignUp';
+import SignIn        from './screens/auth/SignIn';
+import ResetPassword from './screens/auth/ResetPassword';
 
 // Grandma screens
 import GrandmaHome        from './screens/grandma/GrandmaHome';
@@ -55,7 +56,11 @@ function Router() {
     }
   }
 
-  // 3. Logged in but no profile (e.g. profiles row deleted, auth.users still exists)
+  // 3a. Password reset — user has a recovery session but hasn't set a new password yet.
+  //     Must be checked before the profile guard below.
+  if (screen === 'auth-reset-password') return <ResetPassword />;
+
+  // 3b. Logged in but no profile (e.g. profiles row deleted, auth.users still exists)
   //    Show SignUp so the user can fill in name/role and we create the profile row.
   if (!state.profile) return <SignUp />;
 

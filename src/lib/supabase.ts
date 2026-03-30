@@ -30,7 +30,7 @@ export const supabase = createClient(
       autoRefreshToken:   true,
       storageKey:         SUPABASE_STORAGE_KEY,
       storage:            window.localStorage,
-      detectSessionInUrl: false,
+      detectSessionInUrl: true,   // must be true for magic-link + password-reset hash parsing
     },
     global: { fetch: fetchWithTimeout },
   }
@@ -48,6 +48,7 @@ export interface UserProfile {
   invite_code: string | null;
   nickname: string | null;
   gender: 'male' | 'female' | null;
+  difficulties: string[] | null;
   created_at: string;
 }
 

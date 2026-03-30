@@ -1,6 +1,7 @@
 import { useState, FormEvent } from 'react';
 import { useApp } from '../../context/AppContext';
 import { supabase } from '../../lib/supabase';
+import { EyeIcon, EyeOffIcon } from '../../components/icons';
 
 type View = 'signin' | 'forgot' | 'magic';
 
@@ -76,7 +77,10 @@ export default function SignIn() {
     setLoading(true);
     const { error: err } = await supabase.auth.signInWithOtp({
       email: altEmail.trim(),
-      options: { shouldCreateUser: false },
+      options: {
+        shouldCreateUser: false,
+        emailRedirectTo: window.location.origin,
+      },
     });
     setLoading(false);
 
@@ -132,7 +136,7 @@ export default function SignIn() {
                       }}
                       aria-label={showPassword ? 'הסתר סיסמה' : 'הצג סיסמה'}
                     >
-                      {showPassword ? '🙈' : '👁️'}
+                      {showPassword ? <EyeOffIcon size={18} color="var(--mid)" /> : <EyeIcon size={18} color="var(--mid)" />}
                     </button>
                   )}
                 </div>

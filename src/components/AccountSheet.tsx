@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { supabase } from '../lib/supabase';
+import { EyeIcon, EyeOffIcon, KeyIcon, LogoutIcon } from './icons';
 
 interface Props {
   onClose: () => void;
@@ -132,7 +133,7 @@ export default function AccountSheet({ onClose }: Props) {
             {/* Actions */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 16 }}>
               <button onClick={() => { setMsg(null); setView('password'); }} style={actionBtn()}>
-                <span style={{ fontSize: 20 }}>🔑</span>
+                <KeyIcon size={20} color="var(--dark)" />
                 שינוי סיסמה
               </button>
 
@@ -141,7 +142,7 @@ export default function AccountSheet({ onClose }: Props) {
                 onClick={handleSignOut}
                 style={actionBtn('#FFF5F5', '#F5C0C0', '#C0392B')}
               >
-                <span style={{ fontSize: 20 }}>🚪</span>
+                <LogoutIcon size={20} color="#C0392B" />
                 התנתקות
               </button>
             </div>
@@ -179,7 +180,7 @@ export default function AccountSheet({ onClose }: Props) {
                   style={eyeBtn}
                   aria-label={showPassword ? 'הסתר סיסמה' : 'הצג סיסמה'}
                 >
-                  {showPassword ? '🙈' : '👁️'}
+                  {showPassword ? <EyeOffIcon size={18} color="var(--mid)" /> : <EyeIcon size={18} color="var(--mid)" />}
                 </button>
               </div>
             </div>

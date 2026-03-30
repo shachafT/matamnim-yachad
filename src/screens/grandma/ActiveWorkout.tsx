@@ -165,7 +165,7 @@ export default function ActiveWorkout() {
           padding:'6px 16px', textAlign:'center',
           fontSize:'var(--text-sm)', color:'#7A5800', fontWeight:600,
         }}>
-          {res.showConservativeModeLabel ? '🛡️ מצב שמרני – האימון הותאם במיוחד לפרופיל שלך' : '⚠️ האימון הותאם לפי הפרופיל שלך – גרסה בטוחה'}
+          {res.showConservativeModeLabel ? 'מצב שמרני – האימון הותאם במיוחד לפרופיל שלך' : 'האימון הותאם לפי הפרופיל שלך – גרסה בטוחה'}
         </div>
       )}
 
@@ -178,7 +178,7 @@ export default function ActiveWorkout() {
           padding:'4px 16px', textAlign:'center',
           fontSize:'var(--text-xs)', color:'#1A4A60', fontWeight:600,
         }}>
-          🫁 זכרי לנשוף במאמץ – לא לעצור נשימה
+          זכרי לנשוף במאמץ – לא לעצור נשימה
         </div>
       )}
 
@@ -190,7 +190,7 @@ export default function ActiveWorkout() {
           padding:'8px 16px', textAlign:'center',
           fontSize:'var(--text-sm)', color:'#2A1A60', fontWeight:700,
         }}>
-          🤚 יד על קיר או כיסא – תמיד
+          יד על קיר או כיסא – תמיד
         </div>
       )}
 
@@ -202,7 +202,7 @@ export default function ActiveWorkout() {
           padding:'8px 16px', textAlign:'center',
           fontSize:'var(--text-xs)', color:'#1A4020',
         }}>
-          🍽️ מומלץ להתאמן לאחר ארוחה קלה
+          מומלץ להתאמן לאחר ארוחה קלה
         </div>
       )}
 
@@ -232,7 +232,7 @@ export default function ActiveWorkout() {
               {workout.title}
             </div>
             <div style={{ fontSize:'var(--text-sm)', color:'var(--mid)' }}>
-              {res.forceSeated ? '🪑 ' : ''}{res.simplifyInstructions ? '🧠 ' : ''}
+              {res.forceSeated ? '[כיסא] ' : ''}{res.simplifyInstructions ? '[מפושט] ' : ''}
               תרגיל {stepIdx + 1} מתוך {steps.length}
             </div>
           </div>
@@ -256,7 +256,7 @@ export default function ActiveWorkout() {
               background:`${accent}20`, color:accent,
               borderRadius:100, padding:'4px 12px',
               fontSize:'var(--text-xs)', fontWeight:700,
-            }}>🪑 כיסא</span>
+            }}>כיסא</span>
           )}
         </div>
 
@@ -296,7 +296,7 @@ export default function ActiveWorkout() {
           {/* Per-step safety note */}
           {step.safetyNote && (
             <p style={{ fontSize:'var(--text-xs)', color:'#7A5800', marginTop:8, fontWeight:600 }}>
-              ⚠️ {step.safetyNote}
+              {step.safetyNote}
             </p>
           )}
           {res.uiSubtitlesRequired && (
@@ -350,7 +350,7 @@ export default function ActiveWorkout() {
             </div>
             {res.paceMultiplier > 1 && (
               <div style={{ fontSize:'var(--text-xs)', color:accent, marginTop:4 }}>
-                🐢 קצב מותאם
+                קצב מותאם
               </div>
             )}
           </div>
@@ -412,7 +412,7 @@ export default function ActiveWorkout() {
             border:'1.5px solid #F5C5A8',
             fontSize:'var(--text-sm)', color:'#7A2800', lineHeight:1.7,
           }}>
-            <div style={{ fontWeight:700, marginBottom:4 }}>🛑 עצרי אם יש:</div>
+            <div style={{ fontWeight:700, marginBottom:4 }}>עצרי אם יש:</div>
             {res.stopSigns.map((s, i) => <div key={i}>• {s}</div>)}
           </div>
         )}
@@ -425,7 +425,7 @@ export default function ActiveWorkout() {
             border:'1px solid #F5D898',
             fontSize:'var(--text-sm)', color:'#7A5800', lineHeight:1.5,
           }}>
-            {res.safetyAlerts.map((a, i) => <div key={i}>⚠️ {a}</div>)}
+            {res.safetyAlerts.map((a, i) => <div key={i}>• {a}</div>)}
           </div>
         )}
 
@@ -437,7 +437,7 @@ export default function ActiveWorkout() {
             border:'1px solid #B8E0F5',
             fontSize:'var(--text-sm)', color:'#1A4A60', lineHeight:1.6,
           }}>
-            <div style={{ fontWeight:700, marginBottom:4 }}>💡 אם קשה לך:</div>
+            <div style={{ fontWeight:700, marginBottom:4 }}>אם קשה לך:</div>
             {res.variantNotes.map((note, i) => (
               <div key={i} style={{ marginBottom: i < res.variantNotes.length - 1 ? 6 : 0 }}>
                 • {note}
@@ -452,7 +452,7 @@ export default function ActiveWorkout() {
           padding:'10px 14px', marginBottom:20,
           fontSize:'var(--text-xs)', color:'#7A5800',
         }}>
-          ⚠️ {workout.safetyText}
+          {workout.safetyText}
         </div>
       </div>
     </div>
