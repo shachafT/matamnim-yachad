@@ -191,8 +191,11 @@ export default function GrandmaHome() {
 
       {/* Independent workouts */}
       <div style={{ marginBottom: 'var(--space-6)' }}>
-        <p style={{ fontSize: 'var(--text-sm)', fontWeight: 700, color: 'var(--mid)', marginBottom: 10 }}>
-          🧘 אימונים עצמאיים
+        <p style={{ fontSize: 'var(--text-lg)', fontWeight: 800, color: 'var(--dark)', marginBottom: 4 }}>
+          אני רוצה להתאמן עכשיו
+        </p>
+        <p style={{ fontSize: 'var(--text-xs)', color: 'var(--mid)', marginBottom: 12 }}>
+          אימונים קצרים — בלי תיאום עם הנכד/ה
         </p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           {independentWorkouts.map(w => (

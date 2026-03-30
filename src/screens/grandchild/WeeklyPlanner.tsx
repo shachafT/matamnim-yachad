@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { useApp } from '../../context/AppContext';
 import { WORKOUTS, getStepsForWorkout } from '../../data/workoutsData';
 import { getLinkedGrandmaId, saveScheduledWorkout, removeScheduledWorkout } from '../../lib/workoutScheduleService';
+import { PLAN_TRACKS, getPlanTemplate, type PlanTrack } from '../../data/planTemplates';
 
 const HEB_DAYS = ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת'];
 
@@ -105,10 +106,12 @@ export default function WeeklyPlanner() {
   const { weeklySchedule, grandmaProfile, user } = state;
 
   const [planWeeks,    setPlanWeeks]    = useState<1 | 2 | 3 | 4>(1);
+  const [planTrack,    setPlanTrack]    = useState<PlanTrack | null>(null);
   const [openDay,      setOpenDay]      = useState<string | null>(null);
   const [savedDay,     setSavedDay]     = useState<string | null>(null);
   const [structureOpen, setStructureOpen] = useState<string | null>(null);
   const [linkedGrandmaId, setLinkedGrandmaId] = useState<string | null>(null);
+  const [autoFillDone, setAutoFillDone] = useState(false);
 
   const days = useMemo(() => Array.from({ length: planWeeks * 7 }, (_, i) => dateStr(i)), [planWeeks]);
   const today = days[0];
@@ -141,6 +144,21 @@ export default function WeeklyPlanner() {
     setStructureOpen(null);
   };
 
+  const handleAutoFill = () => {
+    if (!planTrack) return;
+    const template = getPlanTemplate(planTrack, planWeeks);
+    template.schedule.forEach((workoutId, idx) => {
+      if (!workoutId) return;
+      const date = dateStr(idx);
+      scheduleWorkout(date, workoutId);
+      if (linkedGrandmaId) {
+        saveScheduledWorkout(linkedGrandmaId, date, workoutId);
+      }
+    });
+    setAutoFillDone(true);
+    setTimeout(() => setAutoFillDone(false), 2000);
+  };
+
   const toggleStructure = (workoutId: string, e: React.MouseEvent) => {
     e.stopPropagation();
     setStructureOpen(prev => prev === workoutId ? null : workoutId);
@@ -163,7 +181,7 @@ export default function WeeklyPlanner() {
           קבעי אימונים ל{grandmaProfile.name}
         </p>
         {/* Plan length selector */}
-        <div style={{ display: 'flex', gap: 8 }}>
+        <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
           {([1, 2, 3, 4] as const).map(w => (
             <button key={w} onClick={() => setPlanWeeks(w)} style={{
               padding: '7px 14px', borderRadius: 20,
@@ -178,6 +196,61 @@ export default function WeeklyPlanner() {
             </button>
           ))}
         </div>
+
+        {/* Plan track selector */}
+        <div style={{ fontSize: 'var(--text-xs)', color: 'var(--mid)', fontWeight: 600, marginBottom: 8 }}>
+          מסלול — מלאי אוטומטית:
+        </div>
+        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+          {PLAN_TRACKS.map(track => {
+            const isSelected = planTrack === track.track;
+            return (
+              <button
+                key={track.track}
+                onClick={() => setPlanTrack(isSelected ? null : track.track as PlanTrack)}
+                style={{
+                  padding: '8px 16px', borderRadius: 20,
+                  border: isSelected ? `2px solid ${track.color}` : '1.5px solid var(--light)',
+                  background: isSelected ? track.color : 'white',
+                  color: isSelected ? 'white' : 'var(--dark)',
+                  fontSize: 'var(--text-sm)', fontWeight: 700,
+                  cursor: 'pointer', fontFamily: 'var(--font-body)',
+                  transition: 'all 0.15s ease',
+                }}
+              >
+                {track.shortLabel}
+              </button>
+            );
+          })}
+          {planTrack && (
+            <button
+              onClick={handleAutoFill}
+              style={{
+                padding: '8px 18px', borderRadius: 20,
+                border: 'none',
+                background: autoFillDone ? 'var(--sage)' : 'var(--dark)',
+                color: 'white',
+                fontSize: 'var(--text-sm)', fontWeight: 700,
+                cursor: 'pointer', fontFamily: 'var(--font-body)',
+                transition: 'all 0.2s ease',
+                display: 'flex', alignItems: 'center', gap: 6,
+              }}
+            >
+              {autoFillDone ? '✓ מולאה' : 'מלאי ←'}
+            </button>
+          )}
+        </div>
+        {planTrack && (
+          <div style={{
+            marginTop: 10, padding: '8px 12px',
+            background: PLAN_TRACKS.find(t => t.track === planTrack)!.color + '15',
+            borderRadius: 10, fontSize: 'var(--text-xs)',
+            color: PLAN_TRACKS.find(t => t.track === planTrack)!.color,
+            fontWeight: 600,
+          }}>
+            {PLAN_TRACKS.find(t => t.track === planTrack)!.description}
+          </div>
+        )}
       </div>
 
       {/* Day cards */}

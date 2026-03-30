@@ -429,6 +429,23 @@ export default function ActiveWorkout() {
           </div>
         )}
 
+        {/* ── Adaptation variant hints ("if hard, do this") ── */}
+        {res.variantNotes.length > 0 && (
+          <div style={{
+            background:'rgba(234,245,251,0.92)', borderRadius:14,
+            padding:'12px 16px', marginBottom:12,
+            border:'1px solid #B8E0F5',
+            fontSize:'var(--text-sm)', color:'#1A4A60', lineHeight:1.6,
+          }}>
+            <div style={{ fontWeight:700, marginBottom:4 }}>💡 אם קשה לך:</div>
+            {res.variantNotes.map((note, i) => (
+              <div key={i} style={{ marginBottom: i < res.variantNotes.length - 1 ? 6 : 0 }}>
+                • {note}
+              </div>
+            ))}
+          </div>
+        )}
+
         {/* ── Fallback workout safety ── */}
         <div style={{
           background:'rgba(255,248,225,0.85)', borderRadius:14,

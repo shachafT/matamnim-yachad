@@ -1,0 +1,2024 @@
+{
+  "README": [
+    {
+      "README – ספריית אימונים ותוכניות מאוחדת": "הקובץ נבנה כבסיס העלאה לקלוד קוד: הוא מחליף את מבנה האימונים הקיים, מוסיף מסלולי תוכנית, ושומר על ההתאמות מהקבצים שהועלו.",
+      "null": null
+    },
+    {
+      "README – ספריית אימונים ותוכניות מאוחדת": "גיליון",
+      "null": "איך קלוד קוד אמור להשתמש בו"
+    },
+    {
+      "README – ספריית אימונים ותוכניות מאוחדת": "ספריית_אימונים",
+      "null": "משמש לבניית ספריית workouts חדשה באפליקציה ולבחירת אימונים לפי מסלול."
+    },
+    {
+      "README – ספריית אימונים ותוכניות מאוחדת": "תרגילים_מלאים",
+      "null": "משמש להחלפת מבנה התרגילים הקיים אחד-לאחד."
+    },
+    {
+      "README – ספריית אימונים ותוכניות מאוחדת": "התאמות_לפי_תרגיל_W07_W12",
+      "null": "משמש ללוגיקת התאמה ברמת תרגיל כאשר צריך פירוט עמוק יותר."
+    },
+    {
+      "README – ספריית אימונים ותוכניות מאוחדת": "מטריצת_התאמות_מאוחדת",
+      "null": "זה הגיליון הראשי ל־rules engine של התאמות אישיות."
+    },
+    {
+      "README – ספריית אימונים ותוכניות מאוחדת": "תבניות_תוכניות",
+      "null": "משמש למסך בחירת מסלול ותבניות לוח אימונים."
+    },
+    {
+      "README – ספריית אימונים ותוכניות מאוחדת": "ימי_תוכנית",
+      "null": "משמש ליצירת planner ארוך לשבוע/שבועיים/3/4 שבועות."
+    },
+    {
+      "README – ספריית אימונים ותוכניות מאוחדת": "לוגיקת_בחירת_תוכנית",
+      "null": "משמש ל-onboarding ולברירת מחדל חכמה."
+    },
+    {
+      "README – ספריית אימונים ותוכניות מאוחדת": "אימונים_עצמאיים_לסבתא",
+      "null": "משמש לאזור 'בא לי להתאמן עכשיו' אצל הסבתא."
+    },
+    {
+      "README – ספריית אימונים ותוכניות מאוחדת": "קשיים_מאוחדים",
+      "null": "משמש למערכת התאמות, UI ומיקרו־קופי."
+    },
+    {
+      "README – ספריית אימונים ותוכניות מאוחדת": "מקורות_מחקר",
+      "null": "תיעוד ואסמכתאות למבנה התוכניות וההתאמות."
+    }
+  ],
+  "ספריית_אימונים": [
+    {
+      "ספריית אימונים מאוחדת – שורה אחת לכל אימון": "המסלולים החדשים נשענים על 12 אימונים בלבד, אבל עם מבנה חדש: האפליקציה בוחרת מסלול בסיס, הנכד מאשר/מעדן, והסבתא יכולה גם להתאמן עצמאית.",
+      "null": null
+    },
+    {
+      "ספריית אימונים מאוחדת – שורה אחת לכל אימון": "מזהה אימון",
+      "null": "מקור מחקר"
+    },
+    {
+      "ספריית אימונים מאוחדת – שורה אחת לכל אימון": "W01",
+      "null": "https://www.who.int/docs/default-source/physical-activity/information-sheet-global-recommendations-on-physical-activity-for-health/physical-activity-recommendations-65years.pdf"
+    },
+    {
+      "ספריית אימונים מאוחדת – שורה אחת לכל אימון": "W02",
+      "null": "https://www.who.int/docs/default-source/physical-activity/information-sheet-global-recommendations-on-physical-activity-for-health/physical-activity-recommendations-65years.pdf"
+    },
+    {
+      "ספריית אימונים מאוחדת – שורה אחת לכל אימון": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "ספריית אימונים מאוחדת – שורה אחת לכל אימון": "W04",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "ספריית אימונים מאוחדת – שורה אחת לכל אימון": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "ספריית אימונים מאוחדת – שורה אחת לכל אימון": "W06",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "ספריית אימונים מאוחדת – שורה אחת לכל אימון": "W07",
+      "null": "https://www.who.int/docs/default-source/physical-activity/information-sheet-global-recommendations-on-physical-activity-for-health/physical-activity-recommendations-65years.pdf"
+    },
+    {
+      "ספריית אימונים מאוחדת – שורה אחת לכל אימון": "W08",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "ספריית אימונים מאוחדת – שורה אחת לכל אימון": "W09",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "ספריית אימונים מאוחדת – שורה אחת לכל אימון": "W10",
+      "null": "https://www.who.int/docs/default-source/physical-activity/information-sheet-global-recommendations-on-physical-activity-for-health/physical-activity-recommendations-65years.pdf"
+    },
+    {
+      "ספריית אימונים מאוחדת – שורה אחת לכל אימון": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "ספריית אימונים מאוחדת – שורה אחת לכל אימון": "W12",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    }
+  ],
+  "תרגילים_מלאים": [
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "זה הגיליון להחלפת האימונים באפליקציה בפועל. לכל תרגיל יש נוסח בטוח, הוראת מסך, גרסת כיסא/קיר וגרסה קצרה.",
+      "null": null
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "מזהה אימון",
+      "null": "מקור מחקר"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "תרגילים מלאים – שורה לכל תרגיל": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    }
+  ],
+  "התאמות_לפי_תרגיל_W07_W12": [
+    {
+      "התאמות לפי תרגיל – W07–W12": "הגיליון שומר את הפירוט העשיר שהגיע בקובצי W07–W12. הוא שימושי כשצריך התאמה ממש ברמת תרגיל ולא רק ברמת אימון.",
+      "null": null
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "מזהה אימון",
+      "null": "מקור מחקר"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "התאמות לפי תרגיל – W07–W12": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    }
+  ],
+  "מטריצת_התאמות_מאוחדת": [
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W01–W06 הועתקו ישירות מהמטריצה שהועלתה. W07–W12 רוכזו מהתאמות ברמת תרגיל + לוגיקת הקשיים המאוחדת כדי לתת ל-Claude Code שכבה אחת עקבית.",
+      "null": null
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "מזהה אימון",
+      "null": "מקור מחקר"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W01",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W02",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W03",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W04",
+      "null": "https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W05",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W06",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W08",
+      "null": "https://www.nice.org.uk/guidance/ng226"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W09",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W10",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W11",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    },
+    {
+      "מטריצת התאמות מאוחדת – שורה לכל אימון × קושי": "W12",
+      "null": "https://order.nia.nih.gov/sites/default/files/2025-04/exercise-and-older-adults-nia_0.pdf"
+    }
+  ],
+  "תבניות_תוכניות": [
+    {
+      "תבניות תוכניות – 3 מסלולים × 1/2/3/4 שבועות": "אלה התוכניות החדשות שאני ממליץ ליישם: האפליקציה בונה מסלול בסיס, הנכד רק מאשר/מעדן, והסבתא תמיד יכולה גם לצאת לאימון עצמאי.",
+      "null": null
+    },
+    {
+      "תבניות תוכניות – 3 מסלולים × 1/2/3/4 שבועות": "plan_id",
+      "null": "מקור מחקר"
+    },
+    {
+      "תבניות תוכניות – 3 מסלולים × 1/2/3/4 שבועות": "P-GENTLE-1W",
+      "null": "https://www.cdc.gov/physical-activity-basics/guidelines/older-adults.html"
+    },
+    {
+      "תבניות תוכניות – 3 מסלולים × 1/2/3/4 שבועות": "P-GENTLE-2W",
+      "null": "https://www.cdc.gov/physical-activity-basics/guidelines/older-adults.html"
+    },
+    {
+      "תבניות תוכניות – 3 מסלולים × 1/2/3/4 שבועות": "P-GENTLE-3W",
+      "null": "https://www.cdc.gov/physical-activity-basics/guidelines/older-adults.html"
+    },
+    {
+      "תבניות תוכניות – 3 מסלולים × 1/2/3/4 שבועות": "P-GENTLE-4W",
+      "null": "https://www.cdc.gov/physical-activity-basics/guidelines/older-adults.html"
+    },
+    {
+      "תבניות תוכניות – 3 מסלולים × 1/2/3/4 שבועות": "P-BALANCED-1W",
+      "null": "https://www.who.int/docs/default-source/physical-activity/information-sheet-global-recommendations-on-physical-activity-for-health/physical-activity-recommendations-65years.pdf"
+    },
+    {
+      "תבניות תוכניות – 3 מסלולים × 1/2/3/4 שבועות": "P-BALANCED-2W",
+      "null": "https://www.who.int/docs/default-source/physical-activity/information-sheet-global-recommendations-on-physical-activity-for-health/physical-activity-recommendations-65years.pdf"
+    },
+    {
+      "תבניות תוכניות – 3 מסלולים × 1/2/3/4 שבועות": "P-BALANCED-3W",
+      "null": "https://www.who.int/docs/default-source/physical-activity/information-sheet-global-recommendations-on-physical-activity-for-health/physical-activity-recommendations-65years.pdf"
+    },
+    {
+      "תבניות תוכניות – 3 מסלולים × 1/2/3/4 שבועות": "P-BALANCED-4W",
+      "null": "https://www.who.int/docs/default-source/physical-activity/information-sheet-global-recommendations-on-physical-activity-for-health/physical-activity-recommendations-65years.pdf"
+    },
+    {
+      "תבניות תוכניות – 3 מסלולים × 1/2/3/4 שבועות": "P-STRENGTH-1W",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תבניות תוכניות – 3 מסלולים × 1/2/3/4 שבועות": "P-STRENGTH-2W",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תבניות תוכניות – 3 מסלולים × 1/2/3/4 שבועות": "P-STRENGTH-3W",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "תבניות תוכניות – 3 מסלולים × 1/2/3/4 שבועות": "P-STRENGTH-4W",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    }
+  ],
+  "ימי_תוכנית": [
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "הגיליון בנוי כך שאפשר לייצר planner של שבוע, שבועיים, 3 שבועות או חודש על בסיס אותם workouts בלבד.",
+      "null": null
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "plan_id",
+      "null": "זמין עצמאית לסבתא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-1W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-1W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-1W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-2W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-2W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-2W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-2W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-2W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-2W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-3W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-3W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-3W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-3W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-4W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-4W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-4W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-4W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-GENTLE-4W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-1W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-1W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-1W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-1W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-2W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-2W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-2W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-2W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-2W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-2W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-2W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-2W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-3W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-3W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-3W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-3W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-4W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-4W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-4W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-4W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-BALANCED-4W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-1W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-1W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-1W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-1W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-1W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-2W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-2W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-2W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-2W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-2W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-2W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-2W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-2W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-2W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-2W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-3W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-3W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-3W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-3W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "כן"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "לא"
+    },
+    {
+      "ימי תוכנית – לוח השיבוץ של כל מסלול": "P-STRENGTH-4W",
+      "null": "כן"
+    }
+  ],
+  "לוגיקת_בחירת_תוכנית": [
+    {
+      "לוגיקת בחירת תוכנית – איך האפליקציה בוחרת מסלול בסיס": "זה הפתרון לשאלה 'איך הנכד ידע לבחור?': הוא לא בוחר מאפס. האפליקציה בוחרת ברירת מחדל לפי מצב וקושי, והנכד רק מאשר או מחליף אימון בודד.",
+      "null": null
+    },
+    {
+      "לוגיקת בחירת תוכנית – איך האפליקציה בוחרת מסלול בסיס": "rule_id",
+      "null": "מקור"
+    },
+    {
+      "לוגיקת בחירת תוכנית – איך האפליקציה בוחרת מסלול בסיס": "R01",
+      "null": "https://www.cdc.gov/steadi/index.html | https://academic.oup.com/ageing/article/52/8/afad145/7243698"
+    },
+    {
+      "לוגיקת בחירת תוכנית – איך האפליקציה בוחרת מסלול בסיס": "R02",
+      "null": "https://www.nice.org.uk/guidance/ng226 | https://www.cdc.gov/physical-activity-basics/adding-older-adults/index.html"
+    },
+    {
+      "לוגיקת בחירת תוכנית – איך האפליקציה בוחרת מסלול בסיס": "R03",
+      "null": "https://www.who.int/docs/default-source/physical-activity/information-sheet-global-recommendations-on-physical-activity-for-health/physical-activity-recommendations-65years.pdf"
+    },
+    {
+      "לוגיקת בחירת תוכנית – איך האפליקציה בוחרת מסלול בסיס": "R04",
+      "null": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf"
+    },
+    {
+      "לוגיקת בחירת תוכנית – איך האפליקציה בוחרת מסלול בסיס": "R05",
+      "null": "https://www.heart.org/en/health-topics/high-blood-pressure/changes-you-can-make-to-manage-high-blood-pressure/getting-active-to-control-high-blood-pressure | https://www.cdc.gov/diabetes/living-with/physical-activity.html"
+    },
+    {
+      "לוגיקת בחירת תוכנית – איך האפליקציה בוחרת מסלול בסיס": "R06",
+      "null": "https://www.nia.nih.gov/toolkits/exercise | https://academic.oup.com/ageing/article/54/7/afaf180/8182151"
+    }
+  ],
+  "אימונים_עצמאיים_לסבתא": [
+    {
+      "אימונים עצמאיים לסבתא – W06–W08": "האזור הזה נועד לשמור גם על אוטונומיה: הסבתא יכולה להתאמן בלי לחכות ללוח של הנכד, אבל הקשר ביניהם נשמר דרך המסלולים, ההודעות והיומן.",
+      "null": null
+    },
+    {
+      "אימונים עצמאיים לסבתא – W06–W08": "workout_id",
+      "null": "מקור"
+    },
+    {
+      "אימונים עצמאיים לסבתא – W06–W08": "W06",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "אימונים עצמאיים לסבתא – W06–W08": "W07",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    },
+    {
+      "אימונים עצמאיים לסבתא – W06–W08": "W08",
+      "null": "https://www.nia.nih.gov/toolkits/exercise"
+    }
+  ],
+  "קשיים_מאוחדים": [
+    {
+      "קשיים מאוחדים – מילון קשיים למערכת ההתאמה האישית": "גיליון זה מרכז את 'טבלת הקשיים המטורפת' לתוך פורמט שקלוד קוד יוכל לקרוא ממנו גם rules לממשק וגם rules לאימון.",
+      "null": null
+    },
+    {
+      "קשיים מאוחדים – מילון קשיים למערכת ההתאמה האישית": "שם קושי",
+      "null": "מקור"
+    },
+    {
+      "קשיים מאוחדים – מילון קשיים למערכת ההתאמה האישית": "בעיות ראייה",
+      "null": "אימונים חדשים 1-6.xlsx | https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "קשיים מאוחדים – מילון קשיים למערכת ההתאמה האישית": "בעיות שמיעה",
+      "null": "אימונים חדשים 1-6.xlsx | https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "קשיים מאוחדים – מילון קשיים למערכת ההתאמה האישית": "לחץ דם גבוה",
+      "null": "אימונים חדשים 1-6.xlsx | https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "קשיים מאוחדים – מילון קשיים למערכת ההתאמה האישית": "סוכרת",
+      "null": "אימונים חדשים 1-6.xlsx | https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "קשיים מאוחדים – מילון קשיים למערכת ההתאמה האישית": "כאבי מפרקים",
+      "null": "אימונים חדשים 1-6.xlsx | https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "קשיים מאוחדים – מילון קשיים למערכת ההתאמה האישית": "שיווי משקל ירוד",
+      "null": "אימונים חדשים 1-6.xlsx | https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "קשיים מאוחדים – מילון קשיים למערכת ההתאמה האישית": "ירידה קוגניטיבית",
+      "null": "אימונים חדשים 1-6.xlsx | https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "קשיים מאוחדים – מילון קשיים למערכת ההתאמה האישית": "יכולות טכניות נמוכות",
+      "null": "אימונים חדשים 1-6.xlsx | https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "קשיים מאוחדים – מילון קשיים למערכת ההתאמה האישית": "קושי בשפה",
+      "null": "אימונים חדשים 1-6.xlsx | https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "קשיים מאוחדים – מילון קשיים למערכת ההתאמה האישית": "מחלות כרוניות מרובות",
+      "null": "אימונים חדשים 1-6.xlsx | https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "קשיים מאוחדים – מילון קשיים למערכת ההתאמה האישית": "עייפות / חוסר מוטיבציה",
+      "null": "אימונים חדשים 1-6.xlsx | https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "קשיים מאוחדים – מילון קשיים למערכת ההתאמה האישית": "בדידות",
+      "null": "אימונים חדשים 1-6.xlsx | https://www.cdc.gov/steadi/index.html"
+    },
+    {
+      "קשיים מאוחדים – מילון קשיים למערכת ההתאמה האישית": "פחד מכישלון",
+      "null": "אימונים חדשים 1-6.xlsx | https://www.cdc.gov/steadi/index.html"
+    }
+  ],
+  "מקורות_מחקר": [
+    {
+      "מקורות מחקר וקבצי משתמש": "המסלולים והלוגיקה החדשה נשענים גם על הקבצים שהועלו וגם על הנחיות עדכניות למבוגרות: רב־רכיביות, בטיחות, שיווי משקל, כוח, והתקדמות הדרגתית.",
+      "null": null
+    },
+    {
+      "מקורות מחקר וקבצי משתמש": "סוג",
+      "null": "שימוש בקובץ/בתוכנית"
+    },
+    {
+      "מקורות מחקר וקבצי משתמש": "מחקר/הנחיות",
+      "null": "היגיון מסלולים: שילוב כוח, שיווי משקל והתקדמות הדרגתית במבוגרות"
+    },
+    {
+      "מקורות מחקר וקבצי משתמש": "מחקר/הנחיות",
+      "null": "בניית מסלול מאוזן ורב-רכיבי; תכנון מסלולי עדין/שגרתי/מחזק"
+    },
+    {
+      "מקורות מחקר וקבצי משתמש": "מחקר/הנחיות",
+      "null": "עקרונות תדירות, כוח, אירובי ושיווי משקל באוכלוסייה מבוגרת"
+    },
+    {
+      "מקורות מחקר וקבצי משתמש": "מחקר/הנחיות",
+      "null": "היגיון של אימונים עצמאיים פשוטים ובטוחים למבוגרות"
+    },
+    {
+      "מקורות מחקר וקבצי משתמש": "מחקר/הנחיות",
+      "null": "דגש על ערבוב סוגי אימון, גיוון והפחתת שעמום ופציעות"
+    },
+    {
+      "מקורות מחקר וקבצי משתמש": "מחקר/הנחיות",
+      "null": "לוגיקת תמיכה בכיסא/קיר והתייחסות לפחד מנפילה/שיווי משקל ירוד"
+    },
+    {
+      "מקורות מחקר וקבצי משתמש": "מחקר/הנחיות",
+      "null": "דגש על נשימה רציפה, קצב שיחה, והימנעות מעצירת נשימה בלחץ דם גבוה"
+    },
+    {
+      "מקורות מחקר וקבצי משתמש": "מחקר/הנחיות",
+      "null": "התייחסות לקיצור אימון, תזמון נוח ביום וכניסה הדרגתית בפעילות עם סוכרת"
+    },
+    {
+      "מקורות מחקר וקבצי משתמש": "מחקר/הנחיות",
+      "null": "היגיון של עומס נמוך, טווח תנועה מותאם ושימוש באימון כחלק מטיפול בסיסי בכאבי מפרקים"
+    },
+    {
+      "מקורות מחקר וקבצי משתמש": "מחקר",
+      "null": "הבנת חסמים: כאב, פחד מנפילה, הנאה ותמיכה חברתית כמניע להתמדה"
+    },
+    {
+      "מקורות מחקר וקבצי משתמש": "מחקר",
+      "null": "היגיון של שכבת קשר/עידוד ושל אוטונומיה לצד תמיכה חברתית"
+    },
+    {
+      "מקורות מחקר וקבצי משתמש": "קובץ משתמש",
+      "null": "בסיס בטוח לאימונים W01-W06, מטריצת התאמות, קשיים ולוגיקה"
+    },
+    {
+      "מקורות מחקר וקבצי משתמש": "קובץ משתמש",
+      "null": "אימונים W07-W12, התאמות לפי קושי ומבנה אימונים"
+    },
+    {
+      "מקורות מחקר וקבצי משתמש": "קובץ משתמש",
+      "null": "מילון קשיים כללי ופתרונות בסיסיים"
+    }
+  ]
+}

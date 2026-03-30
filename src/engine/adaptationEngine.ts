@@ -74,6 +74,8 @@ export interface WorkoutResolution {
   safetyAlerts: string[];
   /** Deduplicated stop signs from all active difficulties */
   stopSigns: string[];
+  /** "If hard, do this instead" hints from active adaptation rules */
+  variantNotes: string[];
   /** Human-readable list of active adaptations (for badge display) */
   activeAdaptations: { label: string; emoji: string }[];
   /** Highest risk level among active difficulties */
@@ -128,6 +130,11 @@ export function resolveWorkoutVariant(
   // ── Stop signs (from stopSigns array, deduplicated) ──
   const stopSigns = [...new Set(
     active.flatMap(a => a.rule.stopSigns)
+  )];
+
+  // ── Variant hints ("if hard → do this") ──
+  const variantNotes = [...new Set(
+    active.map(a => a.rule.variantNote).filter(Boolean)
   )];
 
   // ── Duration: minimum across all applicable rules ──
@@ -266,6 +273,7 @@ export function resolveWorkoutVariant(
     adjustedDuration,
     safetyAlerts,
     stopSigns,
+    variantNotes,
     activeAdaptations,
     maxRiskLevel: maxRisk,
   };
@@ -305,6 +313,7 @@ function buildDefault(workoutId: string): WorkoutResolution {
     adjustedDuration: 0,
     safetyAlerts: [],
     stopSigns: [],
+    variantNotes: [],
     activeAdaptations: [],
     maxRiskLevel: 'נמוך',
   };

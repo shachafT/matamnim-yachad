@@ -320,14 +320,30 @@ export default function ExerciseIllustration({ type, color, side = 'right' }: Pr
       return (
         <div style={styles.wrap}>
           <style>{`
-            @keyframes tandemPulse { 0%,100%{opacity:.4} 50%{opacity:1} }
+            @keyframes tandemPulse { 0%,100%{opacity:.5} 50%{opacity:1} }
           `}</style>
-          <svg width="140" height="140" viewBox="0 0 140 140">
-            <line x1="30" y1="110" x2="110" y2="110" stroke={c} strokeWidth="3" strokeDasharray="6 4" opacity={0.4}/>
-            <ellipse cx="55" cy="112" rx="12" ry="6" fill={c} opacity={0.6} style={{ animation:'tandemPulse 2s ease-in-out infinite' }}/>
-            <ellipse cx="85" cy="112" rx="12" ry="6" fill={c} opacity={0.35}/>
-            <text x="70" y="75" textAnchor="middle" fontSize="18" fill={c} opacity={0.8}>🧍</text>
-            <text x="70" y="44" textAnchor="middle" fontSize="11" fill={c} fontWeight="700" opacity={0.9}>ליד קיר</text>
+          <svg width="180" height="180" viewBox="0 0 180 180">
+            {/* Wall */}
+            <rect x="148" y="20" width="12" height="150" rx="4" fill={c} opacity="0.2"/>
+            {/* Floor line */}
+            <line x1="30" y1="150" x2="145" y2="150" stroke={c} strokeWidth="2" opacity="0.2"/>
+            {/* Foot heel (back) */}
+            <ellipse cx="80" cy="148" rx="14" ry="6" fill={c} opacity="0.35"/>
+            {/* Foot toe (front) touching heel – tandem */}
+            <ellipse cx="100" cy="148" rx="14" ry="6" fill={c} opacity="0.65"
+              style={{ animation:'tandemPulse 2.2s ease-in-out infinite' }}/>
+            {/* Legs */}
+            <rect x="74" y="110" width="14" height="40" rx="7" fill={c} opacity="0.35"/>
+            <rect x="90" y="110" width="14" height="40" rx="7" fill={c} opacity="0.55"/>
+            {/* Torso */}
+            <ellipse cx="90" cy="90" rx="16" ry="22" fill={c} opacity="0.2"/>
+            {/* Arm reaching to wall */}
+            <line x1="106" y1="82" x2="142" y2="90" stroke={c} strokeWidth="6" strokeLinecap="round" opacity="0.55"/>
+            <circle cx="142" cy="90" r="6" fill={c} opacity="0.4"/>
+            {/* Head */}
+            <circle cx="90" cy="50" r="16" fill={c} opacity="0.4"/>
+            {/* Neck */}
+            <rect x="86" y="65" width="8" height="10" rx="3" fill={c} opacity="0.25"/>
           </svg>
         </div>
       );
@@ -352,11 +368,29 @@ export default function ExerciseIllustration({ type, color, side = 'right' }: Pr
       return (
         <div style={styles.wrap}>
           <style>{`
-            @keyframes neckTilt { 0%,100%{transform:rotate(-12deg)} 50%{transform:rotate(12deg)} }
+            @keyframes neckTilt { 0%,100%{transform:rotate(-14deg)} 50%{transform:rotate(14deg)} }
           `}</style>
-          <div style={{ display:'flex', alignItems:'center', justifyContent:'center', width:'100%', height:'100%' }}>
-            <div style={{ animation:'neckTilt 3s ease-in-out infinite', transformOrigin:'50% 80%', fontSize:52 }}>🗣️</div>
-          </div>
+          <svg width="180" height="180" viewBox="0 0 180 180">
+            {/* Body (static) */}
+            <ellipse cx="90" cy="115" rx="22" ry="30" fill={c} opacity="0.2"/>
+            {/* Arms resting */}
+            <rect x="40" y="100" width="36" height="10" rx="5" fill={c} opacity="0.2"/>
+            <rect x="104" y="100" width="36" height="10" rx="5" fill={c} opacity="0.2"/>
+            {/* Neck */}
+            <rect x="84" y="75" width="12" height="14" rx="4" fill={c} opacity="0.3"/>
+            {/* Head tilting */}
+            <g style={{ transformOrigin:'90px 82px', animation:'neckTilt 3s ease-in-out infinite' }}>
+              <circle cx="90" cy="58" r="20" fill={c} opacity="0.45"/>
+              {/* Eyes */}
+              <circle cx="83" cy="55" r="3" fill={c} opacity="0.6"/>
+              <circle cx="97" cy="55" r="3" fill={c} opacity="0.6"/>
+              {/* Mouth – smile */}
+              <path d="M83,65 Q90,72 97,65" stroke={c} strokeWidth="2.5" fill="none" strokeLinecap="round" opacity="0.5"/>
+            </g>
+            {/* Side arrows indicating tilt */}
+            <text x="18" y="68" fill={c} fontSize="22" opacity="0.35">←</text>
+            <text x="138" y="68" fill={c} fontSize="22" opacity="0.35">→</text>
+          </svg>
         </div>
       );
 
@@ -365,13 +399,34 @@ export default function ExerciseIllustration({ type, color, side = 'right' }: Pr
       return (
         <div style={styles.wrap}>
           <style>{`
-            @keyframes calmPulse { 0%,100%{transform:scale(1);opacity:.6} 50%{transform:scale(1.08);opacity:1} }
+            @keyframes calmBreathe { 0%,100%{transform:scaleY(1)} 50%{transform:scaleY(1.06)} }
+            @keyframes calmGlow   { 0%,100%{opacity:.12}         50%{opacity:.28} }
           `}</style>
-          <div style={{ position:'absolute', width:140, height:140, borderRadius:'50%',
-            border:`3px solid ${c}`, opacity:.2, animation:'calmPulse 3s ease-in-out infinite' }} />
-          <div style={{ position:'absolute', width:100, height:100, borderRadius:'50%',
-            border:`2px solid ${c}`, opacity:.35, animation:'calmPulse 3s ease-in-out infinite 0.5s' }} />
-          <span style={{ fontSize:52 }}>✨</span>
+          <svg width="180" height="180" viewBox="0 0 180 180">
+            {/* Glow aura */}
+            <circle cx="90" cy="90" r="75" fill={c} opacity="0.08"
+              style={{ animation:'calmGlow 4s ease-in-out infinite' }}/>
+            {/* Chair */}
+            <rect x="52" y="118" width="76" height="8" rx="4" fill={c} opacity="0.18"/>
+            <rect x="52" y="126" width="8" height="28" rx="4" fill={c} opacity="0.12"/>
+            <rect x="120" y="126" width="8" height="28" rx="4" fill={c} opacity="0.12"/>
+            {/* Body breathing */}
+            <g style={{ transformOrigin:'90px 110px', animation:'calmBreathe 4s ease-in-out infinite' }}>
+              <ellipse cx="90" cy="106" rx="20" ry="24" fill={c} opacity="0.22"/>
+              {/* Arms resting on lap */}
+              <rect x="44" y="108" width="34" height="9" rx="5" fill={c} opacity="0.25"/>
+              <rect x="102" y="108" width="34" height="9" rx="5" fill={c} opacity="0.25"/>
+            </g>
+            {/* Neck */}
+            <rect x="85" y="72" width="10" height="14" rx="4" fill={c} opacity="0.25"/>
+            {/* Head */}
+            <circle cx="90" cy="56" r="18" fill={c} opacity="0.38"/>
+            {/* Closed eyes – relaxed */}
+            <path d="M82,54 Q85,58 88,54" stroke={c} strokeWidth="2.5" fill="none" strokeLinecap="round" opacity="0.6"/>
+            <path d="M92,54 Q95,58 98,54" stroke={c} strokeWidth="2.5" fill="none" strokeLinecap="round" opacity="0.6"/>
+            {/* Gentle smile */}
+            <path d="M83,63 Q90,69 97,63" stroke={c} strokeWidth="2" fill="none" strokeLinecap="round" opacity="0.45"/>
+          </svg>
         </div>
       );
   }
