@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useApp } from '../../context/AppContext';
 import AccountSheet from '../../components/AccountSheet';
+import { PersonIcon } from '../../components/icons';
 import {
   sendMessage, getMessages, subscribeToMessages,
   markAsRead, getLinkedUser,
@@ -91,7 +92,7 @@ export default function GrandchildHome() {
           boxShadow: '0 2px 8px rgba(0,0,0,0.18)',
         }}
       >
-        👤
+        <PersonIcon size={20} color="white" />
       </button>
 
       {showAccount && <AccountSheet onClose={() => setShowAccount(false)} />}

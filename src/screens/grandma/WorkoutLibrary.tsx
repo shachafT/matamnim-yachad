@@ -135,7 +135,7 @@ export default function WorkoutLibrary() {
                   )}
                 </span>
                 <span style={{ fontSize:'var(--text-base)', color:'var(--mid)' }}>
-                  🎒 {w.equipment}
+                  {w.equipment}
                 </span>
               </div>
 
@@ -144,27 +144,27 @@ export default function WorkoutLibrary() {
                 <div style={{ display:'flex', flexWrap:'wrap', gap:6, marginBottom:14 }}>
                   {res.forceSeated && (
                     <span style={{ background:'#E8F3E8', color:'#4A7A4E', borderRadius:100, padding:'3px 10px', fontSize:'var(--text-xs)', fontWeight:600 }}>
-                      🪑 גרסת כיסא
+                      גרסת כיסא
                     </span>
                   )}
                   {res.paceMultiplier > 1 && (
                     <span style={{ background:'#E8F4FB', color:'#3A7A9C', borderRadius:100, padding:'3px 10px', fontSize:'var(--text-xs)', fontWeight:600 }}>
-                      🐢 קצב איטי
+                      קצב איטי
                     </span>
                   )}
                   {res.maxSteps && (
                     <span style={{ background:'#FFF0E8', color:'#C4744A', borderRadius:100, padding:'3px 10px', fontSize:'var(--text-xs)', fontWeight:600 }}>
-                      ✂️ {res.maxSteps} תרגילים
+                      {res.maxSteps} תרגילים
                     </span>
                   )}
                   {res.simplifyInstructions && (
                     <span style={{ background:'#F2EEF8', color:'#7B6EAC', borderRadius:100, padding:'3px 10px', fontSize:'var(--text-xs)', fontWeight:600 }}>
-                      🧠 הוראות פשוטות
+                      הוראות פשוטות
                     </span>
                   )}
                   {(res.uiLargeIllustration || res.uiHighContrast) && (
                     <span style={{ background:'#FBF5E8', color:'#A07020', borderRadius:100, padding:'3px 10px', fontSize:'var(--text-xs)', fontWeight:600 }}>
-                      👁️ תצוגה מוגדלת
+                      תצוגה מוגדלת
                     </span>
                   )}
                 </div>
@@ -190,7 +190,7 @@ export default function WorkoutLibrary() {
       {/* Safety footer */}
       <div style={{ margin:'0 20px 20px', padding:'16px 20px', background:'#FFF8E8', borderRadius:16, border:'1.5px solid #F5D898' }}>
         <p style={{ fontSize:'var(--text-sm)', color:'#7A5800', lineHeight:1.6 }}>
-          ⚠️ <strong>הערה:</strong> אם יש כאב חד, סחרחורת או קושי חריג – עוצרים. האפליקציה אינה תחליף לייעוץ רפואי.
+          <strong>הערה:</strong> אם יש כאב חד, סחרחורת או קושי חריג – עוצרים. האפליקציה אינה תחליף לייעוץ רפואי.
         </p>
       </div>
     </div>
